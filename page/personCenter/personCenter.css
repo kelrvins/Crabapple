@@ -140,6 +140,16 @@ nav {
     min-height: 60px;
 }
 
+.newArticle {
+    display: block;
+    float: left;
+    color: #000;
+    text-decoration: none;
+}
+.newArticle:hover {
+    text-decoration: underline;
+}
+
 .personal-center:hover .personal-menu {
     display: block;
 }
