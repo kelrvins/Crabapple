@@ -33,7 +33,9 @@ main{
 .article-title{
     padding-top: 30px;
 }
-
+.article-text{
+    display: none;
+}
 main article{
     width: 70%;
     float: left;

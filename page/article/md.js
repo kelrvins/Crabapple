@@ -1,14 +1,14 @@
 //初始化页面
 function init() {
-	var textarea = document.getElementsByTagName('textarea')[0];
-	var originText = textarea.value;
+	var articleText = document.getElementById('articleText');
+	var originText = articleText.innerHTML;
 	var markdownText = document.getElementsByClassName('markdown-text')[0];
 	//页面加载后，先解析textarea里原本的内容
 	markdownText.innerHTML = markdownParse(originText);
 	//在textarea里输入时，实时解析内容
-	textarea.oninput = function (e) {
-		markdownText.innerHTML = markdownParse(e.target.value);
-	}
+	// textarea.oninput = function (e) {
+	// 	markdownText.innerHTML = markdownParse(e.target.value);
+	// }
 }
 
 init();
@@ -131,7 +131,7 @@ function markdownParse(str) {
 			temporary = parseList(isOl, line.match(listReg[isOl])[1].length, line);
 		}
 		//解析代码块
-		var codeReg = /^```$/;
+		var codeReg = /```/;
 		if (codeReg.test(line) != false) {
 			function parseCode(codeReg, line) {
 				var codeContent = '';
