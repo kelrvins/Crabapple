@@ -95,8 +95,8 @@ $(document).ready(function () {
             $("#LoginUpName").siblings().show().html("用户名重复")
             return
         }
-        if (getLength(nickname) < 5||getLength(nickname) > 16) {
-            $("#LoginnickName").siblings().show().html("昵称长度应大于5小于16")
+        if (nickname.length < 3||nickname.length > 16) {
+            $("#LoginnickName").siblings().show().html("昵称长度应大于3小于16")
             return
         }
         if (userpwd.length < 6||userpwd.length > 16) {
@@ -137,7 +137,7 @@ $(document).ready(function () {
     //切换登录
     $("#loginIN").on("click", function () {
         $(this).siblings().css("border-bottom", " 1px solid #fff")
-        $(this).css("border-bottom", " 1px solid #ddd")
+        $(this).css("border-bottom", " 1px solid #000")
         $("#loginUpwrap").hide()
         $("#loginInwrap").show()
 
@@ -183,18 +183,4 @@ $(document).ready(function () {
             }
         })
     });
-
-    
-    // 获取字符长度 字母1，汉字2
-    function getLength(str) {
-        var l = str.length;
-        var blen = 0;
-        for (i = 0; i < l; i++) {
-            if ((str.charCodeAt(i) & 0xff00) != 0) {
-                blen++;
-            }
-            blen++;
-        }
-        return blen
-    }
 })
