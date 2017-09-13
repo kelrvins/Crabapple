@@ -31,12 +31,13 @@ $(document).ready(function () {
 
     $("#postArticle").on("click", function () {
         var title = $("#editTitle")[0].value.trim;
+        var edits=$("#editBox")[0].value;
         var tags = $("#editTags")[0].value;
         var tagsArr = tags.split(/[,_、|。/+-*/().]/)
         var tagslength = tagsArr.length
         var articleText = $("#preBox")[0].innerHTML;
 
-        console.log(articleText)
+        console.log(edits)
 
         if (getLength(title) > 80) {
             alert("标题过长，请保持在40字以内")
@@ -59,7 +60,7 @@ $(document).ready(function () {
                 articleText: articleText
             },
             success: function (data, xhr) {
-                if (xhr.status == 0) {
+                if (data[0] == 0) {
                     alert("发表成功")
                 } else {
 

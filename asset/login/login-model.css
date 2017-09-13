@@ -9,30 +9,38 @@
 .clear {
     zoom: 1
 }
-
-html,
-body {
-    height: 100%;
-    width: 100%;
+.login-wrap{
+    display: none;
 }
-
-body {
-    background-image: url("./back.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
+.login-shade {
+    background: rgba(0, 0, 0, 0.57);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .login {
     overflow: hidden;
     background: #fff;
     width: 330px;
-    margin-top: 20%;
-    margin-left: 8%;
+    position: fixed;
     padding: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.close-login{
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 5px;
 }
 
+.close-login:hover{
+    cursor: pointer;
+}
 .login-up-wrap {
     list-style: none;
     margin: 0;
