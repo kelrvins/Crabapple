@@ -287,6 +287,21 @@ nav {
     margin: 0 auto;
 }
 
+.main-create-NewArticle{
+    margin: 10px;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+.main-create-NewArticle:hover{
+    text-decoration: underline;
+}
+.main-create-NewArticle i{
+    font-size: 23px;
+}
+.node-wrap {
+    border-top: 1px solid #ddd;
+}
 .node {
     padding: 15px 10px;
     overflow: hidden;
