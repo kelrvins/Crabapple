@@ -61,19 +61,39 @@
                     <input type="file" name="upload" class="updata-img-input" id="updataImgInput" accept="image/*">
                 </div>
             </div>
-            <p class="input-title must-input">昵称</p>
-            <input type="text" name="inputnickName" class="inputperInfo" id="inputNickName" placeholder="请输入昵称">
-            <p class="input-title">职业</p>
-            <input type="text" name="inputcareer" class="inputperInfo" id="inputCareer" placeholder="请输入职业">
-            <p class="input-title">所在地</p>
-            <input type="text" name="inputaddress"  class="inputperInfo" id="inputAddress" placeholder="请输入地址">
-            <p class="input-title">擅长领域</p>
-            <input type="text" name="inputgoodat" class="inputperInfo" id="inputGoodat" placeholder="请输入擅长领域">
-            <p class="input-title">个人简介</p>
-            <textarea name="inputshortintro" class="input-shortintro" placeholder="请输入个人简介" id="inputShortintro" cols="30" rows="10"></textarea>
+            <ul class="personInfoul">
+                    <p class="input-title must-input">昵称</p>
+                <li>
+                    <input type="text" name="inputnickName" class="inputperInfo" id="inputNickName" placeholder="请输入昵称">
+                    <i></i>
+                </li>
+                <p class="input-title">职业</p>
+                <li>
+                    <input type="text" name="inputcareer" class="inputperInfo" id="inputCareer" placeholder="请输入职业">
+                    <i></i>
+                </li>
+                <p class="input-title">所在地</p>
+                <li>
+                    <input type="text" name="inputaddress" class="inputperInfo" id="inputAddress" placeholder="请输入地址">
+                    <i></i>
+                </li>
+                <p class="input-title">擅长领域</p>
+                <li>
+                    <input type="text" name="inputgoodat" class="inputperInfo" id="inputGoodat" placeholder="请输入擅长领域">
+                    <i></i>
+                </li>
+                <p class="input-title">个人简介</p>
+                <li>
+                    <textarea name="inputshortintro" class="input-shortintro" placeholder="请输入个人简介" id="inputShortintro" cols="30" rows="10"></textarea>
+                    <i></i>
+                </li>
+            </ul>
             <button class="save-info" id="saveInfos">保存</button>
         </article>
     </main>
+    <p class="toast-block" id="toastBlock">修改成功</p>
 </body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="./personalInfo.js"></script>
 
 </html>
