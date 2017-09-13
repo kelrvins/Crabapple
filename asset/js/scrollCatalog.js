@@ -1,4 +1,5 @@
 window.onload = function () {
+    console.log("scroll")
     //标题距离顶部高度集合
     var titlesOffsetTop = [];
     //目录悬浮
@@ -6,7 +7,6 @@ window.onload = function () {
     function setAsidefixed() {
         var asideTop = $(".aside section").offset().top;
         var scrollTop = document.documentElement.scrollTop;
-        // console.log(asideTop,scrollTop)
         if (asideTop - scrollTop < 30 && !fixed) {
             $(".aside section").addClass('fixed-down');
             $("#backTop").show();
@@ -25,7 +25,7 @@ window.onload = function () {
         clearTimeout(timeout)
         timeout = setTimeout(function () {
             moveHignLight();
-        }, 300);
+        }, 100);
     }
 
     setAsidefixed();
@@ -36,6 +36,7 @@ window.onload = function () {
     //移动高亮条
     function moveHignLight() {
         for (var i = 0; i < titlesOffsetTop.length; i++) {
+            // console.log(document.documentElement.scrollTop,titlesOffsetTop[i])
             if ((document.documentElement.scrollTop + 30) > titlesOffsetTop[i]) {
                 $(".high-light-title").css("top", parseInt(30 * i + 45) + "px")
             }
@@ -45,12 +46,14 @@ window.onload = function () {
     // 生成目录
     function setNav() {
         var titles = $("#articleContent :header");
+        // console.log($("#articleContent")[0].offsetTop)
+        var fatherTop=$("#articleContent")[0].offsetTop
         var _li = "";
         var ulExist = false;
         for (var i = 0; i < titles.length; i++) {
             titles[i].id = "articleNav" + i;
-            titlesOffsetTop.push(titles[i].offsetTop)
-            if (titles[i].nodeName == "H2") {
+            titlesOffsetTop.push(titles[i].offsetTop+fatherTop)
+            if (titles[i].nodeName == "H1") {
                 if (ulExist) {
                     _li += '</ul>';
                     ulExist = false;
@@ -68,7 +71,7 @@ window.onload = function () {
 
         /* 点击事件 */
         $('#articleNavWrap li a').click(function () {
-            $(".high-light-title").css("top", parseInt(30 * $(this)[0].dataset.id + 58) + "px")
+            $(".high-light-title").css("top", parseInt(30 * $(this)[0].dataset.id + 45) + "px")
             $('body, html').animate({
                 scrollTop: titlesOffsetTop[$(this)[0].dataset.id]
             }, 300);
@@ -87,8 +90,11 @@ window.onload = function () {
 
     //回到顶部
     $("#backTop").on("click", function () {
-        $('body').animate({
+        console.log("top")
+        $('body,html').animate({
             scrollTop: 0
-        }, 500)
+          },
+          500);
+          return false;
     })
 };
