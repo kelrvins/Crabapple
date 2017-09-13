@@ -1,0 +1,218 @@
+.clear:after {
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+    content: ""
+}
+
+.clear {
+    zoom: 1
+}
+
+html{
+    font-family: "微软雅黑";
+}
+header {
+    height: 400px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+header img{
+    width: 100%;
+    z-index: -1;
+}
+
+main{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.article-title{
+    padding-top: 30px;
+}
+
+main article{
+    width: 70%;
+    float: left;
+    padding: 0 10px;
+}
+.article-info span{
+    padding-right: 10px;
+}
+.article-time{
+    /* font-style: italic; */
+    color: #555;
+}
+.article-time::before{
+    content: "发表于 ";
+}
+.article-modify{
+    color: #000;
+    text-decoration: none;
+}
+.article-modify:hover{
+    text-decoration: underline;
+}
+
+.article-tags span{
+    display: inline-block;
+    background: #eee;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+.article-tags span:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.markdown-text{
+    padding: 10px 0 30px;
+    font-size: 17px;
+    line-height: 28px;
+}
+.markdown-text h2,
+.markdown-text h3{
+    font-weight: 500;
+}
+.markdown-text h3{
+    margin: 10px 0;
+}
+
+.markdown-text {
+    height: calc(100% - 20px);
+    overflow: hidden;
+    width: calc(100% - 20px);
+    padding: 10px;
+    position: relative;
+    font-family: "-apple-system,PingFang SC,Hiragino Sans GB,Arial,Microsoft YaHei,Helvetica Neue,sans-serif";
+    font-size: 20px;
+}
+
+.markdown-text p {
+    margin: 0 0 10px 0;
+    line-height: 30px;
+}
+
+.markdown-text h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 5px;
+    text-align: left;
+}
+
+.markdown-text img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.markdown-text span {
+    text-align: center;
+    position: relative;
+    display: block;
+    color: #aaa;
+    font-size: 18px;
+}
+
+.markdown-text span::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: 50%;
+    width: 80px;
+    transform: translateX(-50%);
+    bottom: -3px;
+    background: #ccc;
+}
+
+.markdown-text ul,
+.markdown-text ol {
+    margin-top: 5px;
+    list-style: none;
+}
+
+.markdown-text ul li {
+    list-style-type: disc;
+}
+
+.markdown-text ol {
+    counter-reset: li;
+}
+
+.markdown-text ol li {
+    list-style-type: decimal;
+}
+
+
+.markdown-text ol>li+ol>li {
+    text-indent: 2em;
+    counter-increment: li;
+}
+
+.markdown-text ol>li+ol>li+ol>li {
+    text-indent: 4em;
+    counter-increment: li;
+}
+
+.markdown-text blockquote {
+    padding: 13px;
+    margin: 15px;
+    font-size: 15px;
+    background-color: #ddd;
+    border-left: 5px solid #333;
+}
+
+.markdown-text hr {
+    border: 0;
+    background-color: #ddd;
+    height: 1px;
+}
+
+.markdown-text pre {
+    padding: 10px;
+    margin: 15px;
+    font-size: 15px;
+    background-color: #eee;
+    color: #000;
+    font-family: "-apple-system,PingFang SC,Hiragino Sans GB,Arial,Microsoft YaHei,Helvetica Neue,sans-serif";
+}
+
+.markdown-text pre>code {
+    color: inherit;
+    background-color: transparent;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.markdown-text a {
+    font-family: sans-serif;
+    color: #000;
+    text-decoration: underline;
+    transition: all 0.2s;
+}
+
+.markdown-text a:hover {
+    color: #1abc9c;
+    transition: all 0.2s;
+}
+
+.markdown-text code {
+    font-family: sans-serif;
+    color: #000;
+    margin: 0 3px;
+    padding: 0 5px;
+    background-color: #eee;
+    border-radius: 3px;
+}
+
+
+.markdown-wrap .iconfont::before {
+    padding: 0;
+}

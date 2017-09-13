@@ -1,0 +1,169 @@
+.clear:after {
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+    content: ""
+}
+
+.clear {
+    zoom: 1
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url("./back.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.login {
+    overflow: hidden;
+    background: #fff;
+    width: 330px;
+    margin-top: 20%;
+    margin-left: 8%;
+    padding: 30px;
+}
+
+.login-up-wrap {
+    list-style: none;
+    margin: 0;
+}
+
+.input-box-Wrap {
+    width: 700px;
+}
+
+.inputBox-title {
+    font-size: 30px;
+    font-weight: 600;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin: 10px 10px 10px 0;
+    border: 1px #fff solid;
+}
+
+.login-up-wrap {
+    display: none;
+}
+
+.inputBox {
+    float: left;
+    width: 300px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.inputBox li {
+    margin-bottom: 20px;
+}
+
+.inputBox li i{
+    font-size: 13px;    
+}
+
+.inputBox-title:first-child {
+    border-bottom: 1px solid #000;
+}
+
+.inputBox-title:hover {
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+
+.user-name-input,
+.user-pwd-input {
+    display: block;
+    line-height: 40px;
+    width: 75%;
+    border: 1px #ddd solid;
+    /* margin-bottom: 20px; */
+    padding-left: 10px;
+}
+
+.user-name-input:focus,
+.user-pwd-input:focus {
+    border: 1px #000 solid;
+    outline: none;
+}
+
+.remember-pwd {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.remember-pwd span {
+    user-select: none;
+}
+
+.remember-pwd input {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.submit-btn {
+    display: block;
+    color: #000;
+    font-weight: 600;
+    padding: 10px 50px;
+    font-size: 20px;
+    background-color: #fff;
+    border: 1px #000 solid;
+    transition: all 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* 多选框样式 */
+input[type=radio] {
+    display: none;
+}
+
+input[type=checkbox] {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.96rem;
+    height: 0.96rem;
+    margin-left: 0.16rem;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 0;
+    outline: 0 !important;
+    line-height: 0.8rem;
+    color: #d8d8d8;
+    overflow: hidden;
+}
+
+input[type=checkbox]:after {
+    content: "";
+    display: block;
+    width: 0.96rem;
+    height: 0.96rem;
+    text-align: center;
+    line-height: 0.8rem;
+    font-size: 0.56rem;
+    color: #fff;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+input[type=checkbox]:checked:after {
+    content: "√";
+    border-color: #000;
+    background-color: #000;
+}

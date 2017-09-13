@@ -1,0 +1,329 @@
+.clear:after {
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+    content: ""
+}
+
+.clear {
+    zoom: 1
+}
+
+html {
+    font-family: "微软雅黑";
+}
+
+header {
+    height: 240px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+header img {
+    width: 100%;
+    z-index: -1;
+}
+
+.banner-text {
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 240px;
+    font-size: 50px;
+    font-weight: 300;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.iconfont::before {
+    padding-right: 5px;
+}
+
+.main-content {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.logo {
+    float: left;
+    height: 60px;
+}
+
+.logo img {
+    height: 50px;
+    padding-top: 5px;
+}
+
+.catalog {
+    float: left;
+    margin: 0;
+}
+
+.catalog li {
+    display: inline-block;
+}
+
+.catalog li a {
+    display: inline-block;
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0 20px;
+    font-weight: 300;
+    line-height: 60px;
+    transition: color .2s;
+}
+
+.catalog li a:hover {
+    color: #1abc9c;
+    transition: color .2s;
+}
+
+.nav-right-wrap {
+    float: right;
+    position: relative;
+    line-height: 60px;
+}
+
+.search-wrap {
+    float: left;
+    padding: 0 20px;
+    position: relative;
+}
+
+.search-wrap input {
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #eee;
+    line-height: 29px;
+    color: #aaa;
+    font-weight: 300;
+    padding: 0 25px 0 10px;
+}
+
+.nav-search-btn {
+    z-index: 5;
+    position: absolute;
+    right: 23px;
+    color: #aaa;
+    top: 0;
+}
+
+.nav-search-btn:hover {
+    cursor: pointer;
+    color: #444;
+}
+
+.userLoginWrap {
+    float: left;
+    min-width: 200px;
+}
+
+.personal-unlogin {
+    float: left;
+}
+
+.personal-unlogin a {
+    line-height: 60px;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.personal-unlogin a:hover {
+    text-decoration: underline;
+}
+
+.personal-center {
+    /* display: none; */
+    float: left;
+    min-width: 55px;
+    position: relative;
+    min-height: 60px;
+}
+
+.personal-center:hover .personal-menu {
+    display: block;
+}
+
+.user-avatar {
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.user-avatar:hover {
+    cursor: pointer;
+}
+
+.header-nick-name {
+    text-align: center;
+    font-weight: 300;
+    margin: 10px;
+}
+
+.header-nick-name:hover {
+    cursor: default;
+}
+
+.personal-menu {
+    /* display: none; */
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    padding: 6px 0px;
+    line-height: 20px;
+    background: #fff;
+    top: 53px;
+    width: 137px;
+    z-index: 2;
+    transition: all 300;
+    border: 1px #ddd solid;
+    border-radius: 3px;
+    margin: 0;
+    list-style: none;
+}
+
+.personal-center:hover .personal-menu {
+    /* display: block; */
+    transition: all 300;
+    visibility: visible;
+}
+
+.personal-menu li a:hover {
+    background: #eee;
+    color: #1abc9c;
+}
+
+.personal-menu li:not(:last-child) {
+    border-bottom: 1px #eee solid;
+}
+
+.personal-menu li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    padding: 7px 35px 7px 15px;
+}
+
+.personInfo {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.per-avatar-set {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.avatar-wrap,
+.avatar-upload {
+    float: left;
+}
+
+.avatar-wrap img {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.avatar-upload {
+    padding-left: 30px;
+}
+
+.avatar-upload p {
+    color: #aaa;
+    font-size: 15px;
+}
+
+.updata-btn {
+    padding: 7px 25px;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.updata-btn:hover {
+    cursor: pointer;
+    background-color: #201F1F;
+}
+
+.updata-img-input {
+    display: none;
+}
+
+.must-input::after {
+    content: "*";
+    color: #f00;
+}
+
+.inputperInfo {
+    width: 100%;
+    line-height: 60px;
+    padding-left: 20px;
+    border: 1px solid #eee;
+}
+
+.inputperInfo:focus {
+    border: 1px solid #000;
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #eee;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #eee;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #eee;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #eee;
+}
+
+.input-shortintro {
+    width: 100%;
+    resize: none;
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+.input-shortintro:focus {
+    border: 1px solid #000;
+    outline: none;
+}
+
+.save-info {
+    color: #fff;
+    background: #292525;
+    padding: 10px 50px;
+    border: 1px solid #292525;
+    outline: none;
+    display: block;
+    border-radius: 25px;
+    margin: 30px auto;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="../../asset/css/normalize.css">
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+<body>
+    <div class="login">
+        <div class="login-title-wrap">
+            <span class="inputBox-title" id="loginIN">Sign in</span>
+            <span class="inputBox-title" id="loginUP">Sign up</span>
+        </div>
+        <div class="input-box-Wrap clear">
+            <ul class="inputBox" id="loginInwrap">
+                <li>
+                    <input type="text" name="username" id="userName" class="user-name-input" placeholder="用户名">
+                    <i></i>
+                </li>
+                <li>
+                    <input type="password" name="password" id="userPwd" class="user-pwd-input" placeholder="密码">
+                    <i></i>
+                </li>
+                <label class="remember-pwd">
+                        <input type="checkbox" name="rememberpwd" id="rememberPwd"><span>记住密码</span>
+                    </label>
+                <button type="submit" class="submit-btn" id="submitBtn">Enter</button>
+            </ul>
+            <ul class="inputBox login-up-wrap" id="loginUpwrap">
+                <li>
+                    <input type="text" name="username" id="LoginUpName" class="user-name-input" placeholder="用户名">
+                    <i></i>
+                </li>
+                <li>
+                    <input type="text" name="nickname" id="LoginnickName" class="user-name-input" placeholder="昵称">
+                    <i></i>
+                </li>
+                <li>
+                    <input type="password" name="password" id="LoginUpPwd" class="user-pwd-input" placeholder="密码">
+                    <i></i>
+                </li>
+                <li>
+                    <input type="password" name="repassword" id="LoginUprePwd" class="user-pwd-input" placeholder="确认密码">
+                    <i></i>
+                </li>
+                <li>
+                    <button type="submit" class="submit-btn" id="submitLoginUpBtn">Enter</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./login.js"></script>
+</body>
+
+</html>

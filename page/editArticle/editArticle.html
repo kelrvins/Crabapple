@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>personalInformation</title>
+  <link rel="stylesheet" href="../../asset/css/normalize.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_405681_6y0mshnhfazcl3di.css">
+  <link rel="stylesheet" href="./editArticle.css">
+</head>
+
+<body>
+  <nav>
+      <div class="main-content clear">
+          <div class="logo"><img src="../../asset/images/logo.jpg" alt="logo"></div>
+          <ul class="catalog">
+              <li><a href="#">首页</a></li>
+              <li><a href="#">标签</a></li>
+              <li><a href="#">关于</a></li>
+          </ul>
+          <div class="nav-right-wrap">
+              <div class="search-wrap">
+                  <input type="text" name="search-w" id="searchInput">
+                  <i class="iconfont icon-search nav-search-btn"></i>
+              </div>
+              <div class="userLoginWrap">
+                  <div class="personal-unlogin" id="personalUnlogin">
+                      <a href="#">登录</a>
+                      <a href="#">注册</a>
+                  </div>
+                  <div class="personal-center" id="personalCenter">
+                      <img src="../../asset/images/avatar.jpeg" alt="头像" id="Avatar" class="user-avatar">
+                      <ul class="personal-menu">
+                          <p class="header-nick-name">不得了了赶紧跑</p>
+                          <li><a href="#" class="iconfont icon-people">个人中心</a></li>
+                          <li><a href="#" class="iconfont icon-close">退出</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </nav>
+  <header>
+    <img src="../../asset/images/computer.png" alt="">
+    <p class="banner-text">&lt; Edit Text / &gt;</p>
+  </header>
+  <main class="main-content clear">
+    <p class="titles-style">文章标题 :</p>
+    <input type="text" name="edit-titles" placeholder="标题&nbsp;:&nbsp;" class="edit-title-input" id="editTitle">
+    <p class="titles-style">Tags :</p>
+    <input type="text" name="edit-tags" placeholder="标签&nbsp;:&nbsp;(例如：前端，Java，设计，用户体验)&nbsp;&nbsp;&nbsp; 以逗号，分离" class="edit-title-input"
+      id="editTags">
+    <div class="markdown-wrap clear">
+      <section class="edit-wrap">
+        <textarea class="origin-text" id="editBox"  spellcheck="false"></textarea>
+      </section>
+      <section class="markdown-content">
+        <div class="markdown-text" id="preBox"></div>
+      </section>
+      <button type="submit" id="postArticle" class="post-article">发布文章
+        <div class="node-bg"></div>
+      </button>
+      <div class="iconfont icon-fullscreen fullcreen-quit" id="fullcreenBtn"></div>
+    </div>
+  </main>
+  <!-- <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script> -->
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./paste-upload-image.js"></script>
+  <script src="./editArticle.js"></script>
+  <script src="./md.js"></script>
+</body>
+
+</html>
