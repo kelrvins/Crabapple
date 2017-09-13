@@ -24,7 +24,6 @@ header {
     overflow: hidden;
 }
 
-
 nav {
     width: 100%;
     height: 60px;
@@ -146,6 +145,7 @@ nav {
     color: #000;
     text-decoration: none;
 }
+
 .newArticle:hover {
     text-decoration: underline;
 }
@@ -287,21 +287,25 @@ nav {
     margin: 0 auto;
 }
 
-.main-create-NewArticle{
+.main-create-NewArticle {
     margin: 10px;
     display: inline-block;
     color: #000;
     text-decoration: none;
 }
-.main-create-NewArticle:hover{
+
+.main-create-NewArticle:hover {
     text-decoration: underline;
 }
-.main-create-NewArticle i{
+
+.main-create-NewArticle i {
     font-size: 23px;
 }
+
 .node-wrap {
     border-top: 1px solid #ddd;
 }
+
 .node {
     padding: 15px 10px;
     overflow: hidden;
@@ -409,14 +413,13 @@ nav {
     content: "Tags:  "
 }
 
-
 .pagination-wrap {
     position: relative;
     margin: 50px 0;
 }
 
 .preview-page,
-.next-page {
+.next-page ,.last-page,.first-page{
     display: inline-block;
     text-decoration: none;
     color: #000;
@@ -427,7 +430,14 @@ nav {
     -moz-transition: color 0.2s;
     transition: color 0.2s;
 }
-
+.first-page{
+    padding: 10px 10px;
+}
+.last-page{
+    position: absolute;
+    right: 5px;
+    padding: 10px 10px;
+}
 .pagination li a {
     padding: 0 5px;
     text-decoration: none;
@@ -465,5 +475,5 @@ nav {
 
 .next-page {
     position: absolute;
-    right: 5px;
+    right: 59px;
 }
