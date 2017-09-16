@@ -3,12 +3,7 @@ function init() {
 	var articleText = document.getElementById('articleText');
 	var originText = articleText.innerHTML;
 	var markdownText = document.getElementsByClassName('markdown-text')[0];
-	//页面加载后，先解析textarea里原本的内容
 	markdownText.innerHTML = markdownParse(originText);
-	//在textarea里输入时，实时解析内容
-	// textarea.oninput = function (e) {
-	// 	markdownText.innerHTML = markdownParse(e.target.value);
-	// }
 }
 
 init();
