@@ -13,7 +13,7 @@ function paginationOpera(e) {
       pagina = e.target.innerHTML;
     }
     //首页
-    if (e.target.className == "first-page" && pagina < 1) {
+    if (e.target.className == "first-page" && pagina > 1) {
       pagina = 1;
     }
     //尾页
