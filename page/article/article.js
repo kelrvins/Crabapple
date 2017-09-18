@@ -4,7 +4,7 @@ $(document).ready(function () {
     $("#articleDel").on("click", function () {
         var _id=$(this).data("id")
         if(confirm("确认删除吗？")){
-            $({
+            $.ajax({
                 type: "GET",
                 url: "",
                 data: _id,
