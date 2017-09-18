@@ -51,7 +51,7 @@ $(document).ready(function () {
             alert("文章内容过短，检查一下吧")
             return
         }
-        $({
+        $.ajax({
             type: "POST",
             url: "",
             data: {
