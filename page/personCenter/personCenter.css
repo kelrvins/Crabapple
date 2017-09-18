@@ -397,8 +397,13 @@ nav {
     transition: color 0.2s;
 }
 
+.modify-article{
+    color: #666;
+    text-decoration: none;
+}
 .modify-article:hover {
     color: #1abc9c !important;
+    text-decoration: underline;
 }
 
 .del-article:hover {
@@ -476,4 +481,30 @@ nav {
 .next-page {
     position: absolute;
     right: 59px;
+}
+
+.loading-wrap {
+    text-align: center;
+    display: none;
+    font-size: 100px;
+    font-weight: 300;
+    color: #ddd;
+    -webkit-transform: rotate(360deg);
+    animation: rotation 1s linear infinite;
+    -moz-animation: rotation 1s linear infinite;
+    -webkit-animation: rotation 1s linear infinite;
+    -o-animation: rotation 1s linear infinite;
+}
+
+.loading-wrap::before {
+    padding: 0 !important;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
 }
