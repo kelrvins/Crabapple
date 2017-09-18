@@ -35,10 +35,7 @@ $(document).ready(function () {
         var tags = $("#editTags")[0].value;
         var tagsArr = tags.split(/[,_、]/)
         var tagslength = tagsArr.length
-        var articleText = $("#preBox")[0].innerHTML;
-
-        // console.log(title)
-
+        // var articleText = $("#preBox")[0].innerHTML;
         if (getLength(title) > 80) {
             alert("标题过长，请保持在40字以内")
             return
@@ -47,7 +44,7 @@ $(document).ready(function () {
             alert("tag过多，请保持在3个以内,顿号“ 、 ”以区分")
             return
         }
-        if (articleText.length < 10) {
+        if (edits.length < 10) {
             alert("文章内容过短，检查一下吧")
             return
         }
@@ -57,7 +54,7 @@ $(document).ready(function () {
             data: {
                 title: title,
                 tagsArr: tagsArr,
-                articleText: articleText
+                articleText: edits
             },
             success: function (data, xhr) {
                 if (data[0] == 0) {
