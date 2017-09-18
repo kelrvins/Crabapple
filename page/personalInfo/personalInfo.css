@@ -344,30 +344,3 @@ nav {
     border-radius: 25px;
     margin: 30px auto;
 }
-
-.toast-block {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background: rgba(41, 37, 37, 0.09);
-    border-radius: 3px;
-    font-size: 25px;
-    display: none;
-    font-weight: 300;
-    animation:toast 3s;
-    opacity: 0;
-}
-
-@keyframes toast {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
