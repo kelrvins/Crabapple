@@ -38,7 +38,7 @@ $(document).ready(function () {
             success: function (data) {
                 var data = data[0];
                 if (data == 0) {
-                    $("#toastBlock").show()
+                    alert("修改成功");
                 }
                 if (data == 1) {
                     $("#userName").css("border", "1px #f00 solid");
@@ -59,6 +59,32 @@ $(document).ready(function () {
         if (objUrl) {
             $("#avatarWrap img").attr("src", objUrl);
         }
+
+        var pic = $('#updataImgInput')[0].files[0];
+        var fd = new FormData();
+        fd.append('uploadFile', pic);
+        $.ajax({
+            type:"get",
+            url: 'https://www.easy-mock.com/mock/591c6b989aba4141cf25b708/step/getStatus',
+            data: fd,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success:function(data){
+                console.log(data)
+                var data = data[0];
+                if (data == 0) {
+                    alert("头像修改成功");
+                }
+                if (data == 1) {
+                    alert("头像修改失败");
+                }
+            },
+            error:function(data){
+                alert("头像修改失败");
+            }
+        });
+
     });
 
     function getObjectURL(file) {
