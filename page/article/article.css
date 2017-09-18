@@ -56,6 +56,7 @@ main article{
     text-decoration: none;
 }
 .article-modify:hover{
+    cursor: pointer;
     text-decoration: underline;
 }
 
