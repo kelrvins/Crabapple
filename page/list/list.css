@@ -161,6 +161,7 @@ nav {
     color: #000;
     text-decoration: none;
 }
+
 .newArticle:hover {
     text-decoration: underline;
 }
@@ -244,6 +245,10 @@ nav {
 
 
 /* list */
+
+.node-wrap {
+    min-height: 500px;
+}
 
 .list-wrap {
     float: left;
@@ -417,7 +422,9 @@ nav {
 }
 
 .preview-page,
-.next-page ,.last-page,.first-page{
+.next-page,
+.last-page,
+.first-page {
     display: inline-block;
     text-decoration: none;
     color: #000;
@@ -428,14 +435,17 @@ nav {
     -moz-transition: color 0.2s;
     transition: color 0.2s;
 }
-.first-page{
+
+.first-page {
     padding: 10px 10px;
 }
-.last-page{
+
+.last-page {
     position: absolute;
     right: 5px;
     padding: 10px 10px;
 }
+
 .pagination li a {
     padding: 0 5px;
     text-decoration: none;
@@ -474,4 +484,30 @@ nav {
 .next-page {
     position: absolute;
     right: 59px;
+}
+
+.loading-wrap {
+    text-align: center;
+    display: none;
+    font-size: 100px;
+    font-weight: 300;
+    color: #ddd;
+    -webkit-transform: rotate(360deg);
+    animation: rotation 1s linear infinite;
+    -moz-animation: rotation 1s linear infinite;
+    -webkit-animation: rotation 1s linear infinite;
+    -o-animation: rotation 1s linear infinite;
+}
+
+.loading-wrap::before {
+    padding: 0 !important;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
 }
