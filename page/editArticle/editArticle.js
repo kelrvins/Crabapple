@@ -2,14 +2,14 @@ $(document).ready(function () {
 
     $("#editTitle").on("change", function () {
         var title = $("#editTitle")[0].value.trim();
-        console.log(title,getLength(title))
+        // console.log(title,getLength(title))
         if (getLength(title) > 80) {
             alert("标题过长，中文请保持在40字以内，英文80字")
         }
     })
     $("#editTags").on("change", function () {
         var tags = $("#editTags")[0].value;
-        var tagsArr = tags.split(/[,_、|。.]/)
+        var tagsArr = tags.split(/[,_、]/)
         var tagslength = tagsArr.length
         if (tagslength > 3) {
             alert("tag过多，请保持在3个以内,顿号“ 、 ”以区分")
@@ -30,14 +30,14 @@ $(document).ready(function () {
     }
 
     $("#postArticle").on("click", function () {
-        var title = $("#editTitle")[0].value.trim;
+        var title = $("#editTitle")[0].value.trim();
         var edits=$("#editBox")[0].value;
         var tags = $("#editTags")[0].value;
-        var tagsArr = tags.split(/[,_、|。/+-*/().]/)
+        var tagsArr = tags.split(/[,_、]/)
         var tagslength = tagsArr.length
         var articleText = $("#preBox")[0].innerHTML;
 
-        console.log(edits)
+        // console.log(title)
 
         if (getLength(title) > 80) {
             alert("标题过长，请保持在40字以内")
