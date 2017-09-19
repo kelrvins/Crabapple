@@ -59,19 +59,17 @@ $(document).ready(function () {
         if (objUrl) {
             $("#avatarWrap img").attr("src", objUrl);
         }
-
         var pic = $('#updataImgInput')[0].files[0];
         var fd = new FormData();
         fd.append('uploadFile', pic);
         $.ajax({
-            type:"get",
+            type: "post",
             url: 'https://www.easy-mock.com/mock/591c6b989aba4141cf25b708/step/getStatus',
             data: fd,
             cache: false,
             contentType: false,
             processData: false,
-            success:function(data){
-                console.log(data)
+            success: function (data) {
                 var data = data[0];
                 if (data == 0) {
                     alert("头像修改成功");
@@ -80,8 +78,10 @@ $(document).ready(function () {
                     alert("头像修改失败");
                 }
             },
-            error:function(data){
+            error: function (xhr, status, error) {
                 alert("头像修改失败");
+                var err = eval("(" + xhr.responseText + ")");
+                console.log(err.Message);
             }
         });
 
